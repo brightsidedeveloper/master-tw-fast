@@ -51,7 +51,8 @@ const HTML = () => {
         <li>3. This is a list item</li>
       </ol>
       <button>This is a button</button>
-      <input type="text" placeholder="This is an input" />
+      <label htmlFor="input_name">This goes with the input</label>
+      <input name="input_name" type="text" placeholder="This is an input" />
       <img src="https://picsum.photos/200" alt="200" />
 
       {/* The following are just divs that have different names so that screen readers can navigate the website */}
@@ -92,10 +93,11 @@ const SizeAndShape = () => {
 // doing w-[size as a fixed number] but we can also do w-[%]/h-[%] which is a percentage of the parent container.
 // We can also do w-[vw]/h-[vh] which is a percentage of the screen's height/width (know as viewport)
 // We can also do w-[max/min]-[size] which is the max or min size of the element
-// We will get more into this laternts responsive
+// We will get more into this as we move on
+// Try changing the size using differnet widths and heights
 const Box1 = tw.div`w-96 h-96 bg-green-500`
-const Box2 = tw.div`w-64 h-64 rounded-2xl bg-yellow-500`
-const Box3 = tw.div`w-44 h-44 rounded-md bg-blue-500`
+const Box2 = tw.div`w-64 h-64 bg-yellow-500`
+const Box3 = tw.div`w-44 h-44 bg-blue-500`
 const Box4 = tw.div`w-32 h-32 bg-red-500`
 
 //* --------- Colors --------- *//
@@ -123,8 +125,8 @@ const Border = tw.div`bg-green-500 border-2 border-red-500 w-96 h-96`
 const Text = tw.div`text-red-500`
 // This is using bg-gradient-to-[direction] from-[color]-[deepness] to-[color]-[deepness] to set the gradient
 const Gradient = tw.div`bg-gradient-to-r from-red-500 to-blue-500 w-96 h-96`
-// This is using shadow-[size] to set the shadow
-const Shadow = tw.div`bg-white shadow-2xl w-96 h-96`
+// This is using shadow-[size] to set the shadow (bonus style - I put on rounded corners)
+const Shadow = tw.div`bg-white shadow-2xl rounded-2xl w-96 h-96`
 
 //* --------- Margin and Padding --------- *//
 
